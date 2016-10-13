@@ -838,7 +838,6 @@ a {
       font-size: 1.2em; } }
 
 #board {
-/*  font-size: 0.8em; */
  font-weight: 600;
 }
 
@@ -858,8 +857,7 @@ a {
       font-size: 0.8em; } }
 
 .centeredtext {
-  text-align: center;
-}
+  text-align: center; }
 
 .shaded {
   background-color: #E5E3DE; }
