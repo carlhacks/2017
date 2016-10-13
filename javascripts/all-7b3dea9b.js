@@ -1,16 +1,17 @@
 //= require_tree .
 
 var update_timer = function() {
-  var event = new Date(2016, 11, 1, 0, 0);
+  var event = new Date("November 1, 2016");
   var now = new Date();
-  if (event - now > 0) {
-    var seconds = Math.floor((event-now)/1000);
-    var minutes = Math.floor(seconds/60);
-    seconds -= minutes * 60;
-    var hours = Math.floor(minutes/60);
-    minutes -= hours * 60;
-    var days = Math.floor(hours/24);
-    hours -= days * 24;
+  var timediff = event - now;
+  if (timediff > 0) {
+    var seconds = Math.floor((timediff)/1000); //seconds = timediff divided by 100
+    var minutes = Math.floor(seconds/60); //minutes = seconds divided by 60
+    seconds -= minutes * 60; //seconds = subtract number of minutes times 60
+    var hours = Math.floor(minutes/60); //hours = minutes divided by 60
+    minutes -= hours * 60; //minutes = subtract number of hours times 60
+    var days = Math.floor(hours/24); //days = hours divided by 24
+    hours -= days * 24; //hours = subtract number of days times 24
     $("#timer").text("Registration opens in " + days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
     $("#timer-large").html("Registration opens in<br>" + days + "days<br>" + hours + " hours<br>" + minutes + " minutes<br>" + seconds + " seconds");
   } else {
