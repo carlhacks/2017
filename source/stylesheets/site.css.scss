@@ -1,0 +1,293 @@
+@charset "utf-8";
+@import "normalize";
+@import "grid";
+
+$primary-color: #3D3D85;
+
+@mixin desktop {
+  @media only screen and (min-width: 768px) { @content; }
+}
+
+body {
+  font-family: "Whitney SSm A", "Whitney SSm B";
+  font-style: normal;
+  font-weight: 400; // we also have the 600 and 700 font weights
+  font-size: 15px;
+  background-color: #f9f9f9;
+}
+
+a {
+  color: inherit;
+}
+
+.title {
+  background-color: rgba($primary-color, 0.9);
+  background-image: image-url('BG.jpg');
+  @include desktop {
+    background-image: none;
+  }
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  font-size: 2em;
+}
+
+.notbold {
+  font-weight: 400;
+}
+
+.smaller {
+  font-size: .85em;
+}
+
+.logo {
+  height: 150px;
+}
+
+.navbar {
+  padding: 10px;
+}
+
+.navsec {
+  padding-right: 20px;
+}
+
+.secheader {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.general {
+  background-color: #fcfcfc;
+  color: $primary-color;
+}
+
+.content {
+  text-decoration: none;
+  padding: 20px;
+  @include desktop { padding: 50px; }
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  @include desktop {
+    width: 100px;
+    height: 100px;
+  }
+  border-radius: 50%;
+}
+
+.quote {
+  font-size: 0.9em;
+  @include desktop { font-size: 1.2em; }
+  color: #888;
+}
+
+.shaded {
+  background-color: #E5E3DE;
+}
+.shaded-dark {
+  background-color: #333;
+  color: #eee;
+}
+
+.wborder {
+  border: 1px solid white;
+}
+
+.testImg {
+  max-width: 90%;
+  padding: 20px;
+}
+
+.schedule {
+  td {
+    padding-top: 4px;
+    padding-right: 10px;
+  }
+  td:first-child {
+    font-style: italic;
+    text-align: right;
+  }
+  td.strong {
+    font-weight: 600;
+  }
+}
+
+h1, h2, h3, h4, p, ul {
+  margin: 0px;
+}
+
+h1.hero-header {
+  line-height: 0.8;
+  font-weight: 700;
+}
+
+h1, h2, h3, strong {
+  font-weight: 600;
+}
+
+h2 {
+  font-size: .67em;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: .9em;
+  font-style: italic;
+}
+
+ul {
+  padding-left: 1.6em;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.timer, .timer-large {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0.9em 1em;
+  border-radius: 3px;
+  text-transform: none;
+  font-weight: 600;
+  font-size: 0.8rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+.timer-large {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-transform: none;
+  width: auto;
+}
+
+.smalltext {
+  text-align: center;
+  text-transform: none;
+  font-size: 1.2rem;
+}
+
+.button>button, .button-light>button {
+  width: 100%;
+  display: block;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0.6em 1em;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 100ms linear;
+  &:hover { transform: scale(1.05); }
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+.button>button {
+  color: white;
+  border: 2px solid white;
+  &:hover {
+    background-color: white;
+    color: $primary-color;
+  }
+  &:focus { box-shadow: 0px 0px 4px white; }
+}
+.button-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.button-light>button {
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+  }
+  &:focus { box-shadow: 0px 0px 4px $primary-color; }
+}
+
+.hero {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: 3em 0;
+  @include desktop { font-size: 1em; }
+}
+
+.bullet {
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.full-img {
+  width: 100%;
+}
+
+.bg-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow:hidden;
+  // display: none;
+  // @desktop { display: block; }
+
+  &>video {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+@keyframes move_eye {
+  from { transform: translateY(-7px); }
+  to { transform: translateY(0px); }
+}
+
+.see-more {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  animation: 900ms cubic-bezier(0.445, 0.05, 0.55, 0.95) 0s infinite alternate move_eye;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+  }
+}
+.see-more-top-padding {
+  height: 60px;
+}
+
+.sponsor-img {
+  width: 100%;
+  max-height: auto;
+}
