@@ -1,7 +1,7 @@
 //= require_tree .
 
 var update_timer = function() {
-  var event = new Date(2016, 11, 1, 0, 0);
+  var event = new Date(2017, 4, 14, 9, 30);
   var now = new Date();
   if (event - now > 0) {
     var seconds = Math.floor((event-now)/1000);
@@ -14,8 +14,8 @@ var update_timer = function() {
     $("#timer").text("Registration begins in " + days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
     $("#timer-large").html("Registration begins in<br>" + days + "days<br>" + hours + " hours<br>" + minutes + " minutes<br>" + seconds + " seconds");
   } else {
-    $("#timer").text("Coding has stopped!");
-    $("#timer-large").text("Coding has stopped!");
+    $("#timer").text("Registration has ended!");
+    $("#timer-large").text("Registration has ended!");
   }
 };
 
