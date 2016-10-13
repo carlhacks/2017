@@ -86,7 +86,7 @@ a:hover {
  * Safari 5, and Chrome.
  */
 h1 {
-  font-size: 2em; }
+  font-size: 2.1em; }
 /*
  * Addresses styling not present in IE 8/9, Safari 5, and Chrome.
  */
@@ -120,7 +120,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 1em; }
 
 /*
@@ -764,7 +764,7 @@ table {
     left: 0;
     right: 0; } }
 body {
-  font-family: "Whitney SSm A", "Whitney SSm B";
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
@@ -788,6 +788,10 @@ a {
   padding: none;
   text-decoration: none;
   font-weight: 600;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .notbold {
