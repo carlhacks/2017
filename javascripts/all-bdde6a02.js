@@ -9,7 +9,9 @@ var update_timer = function() {
     seconds -= minutes * 60;
     var hours = Math.floor(minutes/60);
     minutes -= hours * 60;
-    $("#timer").text("Coding ends in " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
+    var days = Math.floor(hours/24);
+    hours -= days * 24;
+    $("#timer").text("Coding begins in " + days + "days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
     $("#timer-large").html("Coding ends in<br>" + hours + " hours<br>" + minutes + " minutes<br>" + seconds + " seconds");
   } else {
     $("#timer").text("Coding has stopped!");
