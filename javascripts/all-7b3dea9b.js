@@ -11,7 +11,7 @@ var update_timer = function() {
     minutes -= hours * 60;
     var days = Math.floor(hours/24);
     hours -= days * 24;
-    $("#timer").text("Coding begins in " + days + "days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
+    $("#timer").text("Coding begins in " + days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds");
     $("#timer-large").html("Coding begins in<br>" + days + "days<br>" + hours + " hours<br>" + minutes + " minutes<br>" + seconds + " seconds");
   } else {
     $("#timer").text("Coding has stopped!");
