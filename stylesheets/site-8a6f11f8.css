@@ -784,6 +784,12 @@ a {
   @media only screen and (min-width: 768px) {
     .title {
       background-image: none; } }
+      
+.inlinelink {
+  padding: none;
+  text-decoration: none;
+  font-weight: 600;
+}
 
 .notbold {
   font-weight: 400; }
@@ -850,6 +856,10 @@ a {
   @media only screen and (min-width: 768px) {
     .bio {
       font-size: 0.8em; } }
+
+.centeredtext {
+  text-align: center;
+}
 
 .shaded {
   background-color: #E5E3DE; }
