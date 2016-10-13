@@ -1,7 +1,7 @@
 //= require_tree .
 
 var update_timer = function() {
-  var event = new Date(2017, 4, 14, 9, 30);
+  var event = new Date(2016, 11, 1);
   var now = new Date();
   if (event - now > 0) {
     var seconds = Math.floor((event-now)/1000);
