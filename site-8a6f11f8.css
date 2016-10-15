@@ -919,7 +919,7 @@ p {
   font-weight: 400;
   line-height: 1.7; }
 
-.timer, .timer-large {
+.timer, .timer-large{
   width: 100%;
   box-sizing: border-box;
   text-align: center;
@@ -962,7 +962,7 @@ p {
       display: block; } }
 }
 
-.button-large {
+.button-large, {
   font-size: 1.3rem;
   line-height: 1.5;
   text-transform: none;
